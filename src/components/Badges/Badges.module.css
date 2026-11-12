@@ -1,0 +1,300 @@
+
+/* ================================
+   BADGES MAIN CONTAINER
+================================ */
+
+.badgesContainer {
+    background: linear-gradient(145deg, #20263a, #191e30);
+    border: 1px solid #343b52;
+    border-radius: 20px;
+    padding: 28px;
+    margin-top: 25px;
+    color: #ffffff;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+}
+
+/* ================================
+   SECTION HEADING
+================================ */
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 26px;
+}
+
+.heading p {
+    color: #d5b76a;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0 0 8px;
+}
+
+.heading h2 {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.heading span {
+    color: #f4d37e;
+    background: rgba(224, 181, 83, 0.12);
+    border: 1px solid rgba(224, 181, 83, 0.3);
+    padding: 9px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* ================================
+   BADGES GRID
+================================ */
+
+.badgesGrid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+/* ================================
+   BADGE CARD
+================================ */
+
+.badgeCard {
+    position: relative;
+    min-width: 0;
+    background: linear-gradient(160deg, #292f46, #22283c);
+    border: 1px solid #3a425c;
+    border-radius: 17px;
+    padding: 24px 15px;
+    text-align: center;
+    overflow: hidden;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.badgeCard:hover {
+    transform: translateY(-6px);
+    border-color: #d8b65f;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+/* ================================
+   UNLOCKED CARD
+================================ */
+
+.unlocked {
+    border-color: rgba(220, 183, 91, 0.45);
+}
+
+.unlocked::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: 70%;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #e9c46a,
+        transparent
+    );
+}
+
+/* ================================
+   LOCKED CARD
+================================ */
+
+.locked {
+    background: linear-gradient(160deg, #252a3b, #1d2233);
+    border-color: #353b50;
+    opacity: 0.7;
+}
+
+.locked:hover {
+    transform: translateY(-3px);
+    border-color: #697087;
+}
+
+/* ================================
+   BADGE ICON
+================================ */
+
+.badgeIcon {
+    width: 78px;
+    height: 78px;
+    margin: 0 auto 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 37px;
+    background: #30374d;
+    border: 2px solid #596078;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.badgeCard:hover .badgeIcon {
+    transform: scale(1.08) rotate(4deg);
+}
+
+/* Badge color variations */
+
+.bronze {
+    background: radial-gradient(circle, #75502e, #3c2b25);
+    border-color: #c18a54;
+}
+
+.silver {
+    background: radial-gradient(circle, #69758a, #30384a);
+    border-color: #c1c9d8;
+}
+
+.gold {
+    background: radial-gradient(circle, #8c6a25, #40321d);
+    border-color: #edc65e;
+}
+
+.platinum {
+    background: radial-gradient(circle, #536c83, #273649);
+    border-color: #9cc6e8;
+}
+
+/* ================================
+   BADGE TEXT
+================================ */
+
+.badgeCard h3 {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 9px;
+}
+
+.badgeCard p {
+    color: #aeb5c9;
+    font-size: 12px;
+    line-height: 1.6;
+    min-height: 39px;
+    margin: 0 0 12px;
+}
+
+/* ================================
+   XP REQUIREMENT
+================================ */
+
+.badgeRequirement {
+    display: block;
+    color: #e6c778;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+/* ================================
+   STATUS LABEL
+================================ */
+
+.badgeStatus {
+    display: inline-block;
+    color: #a9e6c2;
+    background: rgba(46, 139, 87, 0.17);
+    border: 1px solid rgba(91, 190, 132, 0.3);
+    border-radius: 30px;
+    padding: 7px 13px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+}
+
+.locked .badgeStatus {
+    color: #c0c5d3;
+    background: rgba(120, 128, 148, 0.15);
+    border-color: rgba(150, 157, 177, 0.25);
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1000px) {
+    .badgesGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+    .badgesContainer {
+        padding: 19px;
+        border-radius: 16px;
+    }
+
+    .heading {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .heading h2 {
+        font-size: 19px;
+    }
+
+    .badgesGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 11px;
+    }
+
+    .badgeCard {
+        padding: 19px 9px;
+    }
+
+    .badgeIcon {
+        width: 65px;
+        height: 65px;
+        font-size: 30px;
+    }
+
+    .badgeCard h3 {
+        font-size: 13px;
+    }
+
+    .badgeCard p {
+        font-size: 11px;
+        min-height: 50px;
+    }
+}
+
+/* Small mobile */
+
+@media (max-width: 360px) {
+    .badgesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .heading h2 {
+        font-size: 17px;
+    }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .badgeCard,
+    .badgeIcon {
+        transition: none;
+    }
+}

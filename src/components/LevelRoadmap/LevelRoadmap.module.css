@@ -1,0 +1,310 @@
+
+/* =================================
+   PREMIUM LEVEL ROADMAP
+================================= */
+
+.roadmap {
+    position: relative;
+    background:
+        linear-gradient(145deg, rgba(233, 189, 88, 0.055), transparent 55%),
+        #202438;
+    border: 1px solid #383d53;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 25px;
+    color: #ffffff;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.16);
+    overflow: hidden;
+}
+
+/* Heading */
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    gap: 15px;
+}
+
+.heading p {
+    color: #e9bd58;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 9px;
+}
+
+.heading h2 {
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: -0.4px;
+    margin: 0;
+    color: #ffffff;
+}
+
+.heading span {
+    color: #f1d58f;
+    background: rgba(233, 189, 88, 0.12);
+    border: 1px solid rgba(233, 189, 88, 0.3);
+    padding: 9px 15px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Level List */
+
+.levelList {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Common Level Card */
+
+.levelItem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    background: #262b40;
+    border: 1px solid #363c52;
+    border-radius: 15px;
+    padding: 17px;
+    transition: all 0.3s ease;
+}
+
+.levelItem:hover {
+    transform: translateX(4px);
+    border-color: #656b7d;
+    background: #2b3046;
+}
+
+/* Completed Level */
+
+.completed {
+    background: linear-gradient(
+        110deg,
+        rgba(69, 153, 117, 0.13),
+        #262b40 70%
+    );
+    border-color: rgba(94, 184, 139, 0.35);
+}
+
+.completed .levelNumber {
+    background: linear-gradient(135deg, #70c69d, #318b68);
+    color: #102a20;
+    box-shadow: 0 4px 15px rgba(77, 179, 131, 0.2);
+}
+
+/* Current Level */
+
+.current {
+    background: linear-gradient(
+        110deg,
+        rgba(233, 189, 88, 0.17),
+        #302d3b 75%
+    );
+    border: 1px solid #e9bd58;
+    box-shadow: 0 0 0 1px rgba(233, 189, 88, 0.08),
+                0 8px 25px rgba(233, 189, 88, 0.08);
+}
+
+.current .levelNumber {
+    background: linear-gradient(135deg, #ffe6a0, #e9bd58, #b88732);
+    color: #161827;
+    box-shadow: 0 5px 18px rgba(233, 189, 88, 0.25);
+}
+
+/* Locked Level */
+
+.locked {
+    background: rgba(38, 43, 64, 0.55);
+    border-color: #30364a;
+    opacity: 0.72;
+}
+
+.locked .levelNumber {
+    background: #353b50;
+    color: #aeb4c7;
+}
+
+/* Level Number Circle */
+
+.levelNumber {
+    width: 48px;
+    height: 48px;
+    border-radius: 15px;
+    background: #41485f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 900;
+    flex-shrink: 0;
+}
+
+/* Level Details */
+
+.levelDetails {
+    flex: 1;
+    min-width: 0;
+}
+
+.levelDetails h3 {
+    font-size: 15px;
+    font-weight: 750;
+    color: #ffffff;
+    margin: 0 0 6px;
+}
+
+.levelDetails p {
+    color: #aeb4c7;
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Status Labels */
+
+.status {
+    color: #e9bd58;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.completed .status {
+    color: #80d2a9;
+}
+
+.current .status {
+    color: #f5d889;
+}
+
+.locked .status {
+    color: #aeb4c7;
+}
+
+/* Optional progress indicator */
+
+.levelItem::before {
+    content: "";
+    position: absolute;
+    left: 40px;
+    bottom: -15px;
+    width: 2px;
+    height: 14px;
+    background: #42485b;
+    z-index: 0;
+}
+
+.levelItem:last-child::before {
+    display: none;
+}
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 768px) {
+    .roadmap {
+        padding: 23px;
+    }
+
+    .heading h2 {
+        font-size: 20px;
+    }
+
+    .levelItem {
+        padding: 15px;
+    }
+
+    .levelNumber {
+        width: 43px;
+        height: 43px;
+    }
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+    .roadmap {
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    .heading {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 22px;
+    }
+
+    .heading h2 {
+        font-size: 18px;
+    }
+
+    .heading span {
+        font-size: 10px;
+    }
+
+    .levelList {
+        gap: 11px;
+    }
+
+    .levelItem {
+        gap: 12px;
+        padding: 13px 11px;
+        border-radius: 12px;
+    }
+
+    .levelNumber {
+        width: 39px;
+        height: 39px;
+        border-radius: 12px;
+        font-size: 14px;
+    }
+
+    .levelDetails h3 {
+        font-size: 13px;
+    }
+
+    .levelDetails p {
+        font-size: 10px;
+    }
+
+    .status {
+        font-size: 9px;
+    }
+
+    .levelItem::before {
+        left: 30px;
+    }
+}
+
+/* Small mobile */
+
+@media (max-width: 360px) {
+    .levelItem {
+        flex-wrap: wrap;
+    }
+
+    .status {
+        margin-left: 51px;
+    }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+    .levelItem {
+        transition: none;
+    }
+}

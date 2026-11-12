@@ -1,0 +1,504 @@
+
+/* =================================
+   VELOOP PREMIUM REWARDS DASHBOARD
+================================= */
+
+.dashboard {
+    min-height: 100vh;
+    width: 100%;
+    background:
+        radial-gradient(ellipse at 15% 0%, rgba(233, 189, 88, 0.07), transparent 35%),
+        #161827;
+    color: #ffffff;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.dashboard *,
+.dashboard *::before,
+.dashboard *::after {
+    box-sizing: border-box;
+}
+
+/* =================================
+   NAVIGATION BAR
+================================= */
+
+.navbar {
+    min-height: 82px;
+    padding: 14px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: rgba(27, 30, 48, 0.96);
+    border-bottom: 1px solid rgba(233, 189, 88, 0.16);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(16px);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    flex-shrink: 0;
+}
+
+.logoIcon {
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #ffe6a0, #e9bd58, #a87827);
+    color: #161827;
+    border-radius: 13px;
+    font-size: 24px;
+    font-weight: 900;
+    box-shadow: 0 5px 20px rgba(233, 189, 88, 0.2);
+}
+
+.logo h2 {
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #ffffff;
+    margin: 0;
+}
+
+.logo h2 span {
+    color: #e9bd58;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navLinks a {
+    color: #aeb4c7;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+    position: relative;
+    padding: 10px 0;
+}
+
+.navLinks a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 2px;
+    background: #e9bd58;
+    transition: width 0.25s ease;
+}
+
+.navLinks a:hover {
+    color: #f5d889;
+}
+
+.navLinks a:hover::after {
+    width: 100%;
+}
+
+/* Profile */
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 13px;
+    border: 1px solid #383d53;
+    border-radius: 30px;
+    background: #22263a;
+    flex-shrink: 0;
+}
+
+.avatar {
+    width: 39px;
+    height: 39px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #414964, #282d43);
+    border: 1px solid #e9bd58;
+    color: #f5c75e;
+    font-weight: 800;
+}
+
+.profile h4 {
+    font-size: 13px;
+    margin: 0;
+    color: #ffffff;
+}
+
+.profile p {
+    font-size: 10px;
+    color: #aeb4c7;
+    margin: 4px 0 0;
+}
+
+/* =================================
+   MAIN DASHBOARD
+================================= */
+
+.main {
+    max-width: 1500px;
+    width: 100%;
+    margin: auto;
+    padding: 42px 5%;
+}
+
+/* =================================
+   WELCOME SECTION
+================================= */
+
+.welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    padding: 32px 0 42px;
+}
+
+.subtitle {
+    color: #e9bd58;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    margin-bottom: 17px;
+}
+
+.welcome h1 {
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    line-height: 1.2;
+    margin: 0 0 17px;
+}
+
+.welcome h1 span {
+    background: linear-gradient(90deg, #ffe7a3, #e9bd58, #bd8d38);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.description {
+    color: #aeb4c7;
+    line-height: 1.8;
+    font-size: 14px;
+    max-width: 590px;
+    margin: 0;
+}
+
+/* Welcome Journey Card */
+
+.dateCard {
+    background:
+        linear-gradient(135deg, rgba(233, 189, 88, 0.12), transparent 75%),
+        #202438;
+    border: 1px solid rgba(233, 189, 88, 0.35);
+    padding: 28px;
+    border-radius: 20px;
+    min-width: 250px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+    position: relative;
+    overflow: hidden;
+}
+
+.dateCard::after {
+    content: "✦";
+    position: absolute;
+    right: 18px;
+    top: 8px;
+    color: rgba(233, 189, 88, 0.3);
+    font-size: 55px;
+}
+
+.dateCard span {
+    font-size: 10px;
+    color: #e9bd58;
+    letter-spacing: 1.8px;
+    font-weight: 800;
+}
+
+.dateCard h3 {
+    margin: 14px 0 10px;
+    font-size: 23px;
+    color: #ffffff;
+}
+
+.dateCard p {
+    font-size: 12px;
+    color: #aeb4c7;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* =================================
+   CONTENT CARDS
+================================= */
+
+.contentGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin: 30px 0;
+}
+
+.sectionCard {
+    position: relative;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.025), transparent 65%),
+        #202438;
+    border: 1px solid #34394f;
+    border-radius: 19px;
+    padding: 30px;
+    margin-bottom: 24px;
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.sectionCard:hover {
+    border-color: rgba(233, 189, 88, 0.65);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.22);
+}
+
+.sectionCard > p:first-child {
+    color: #e9bd58;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    margin: 0 0 14px;
+}
+
+.sectionCard h2 {
+    color: #ffffff;
+    font-size: clamp(25px, 3vw, 34px);
+    font-weight: 800;
+    margin: 8px 0 12px;
+}
+
+.sectionCard h3 {
+    color: #f5c75e;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.sectionCard p {
+    color: #aeb4c7;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* =================================
+   SECTION SPACING
+================================= */
+
+.main > section {
+    scroll-margin-top: 100px;
+}
+
+.main > section + section {
+    margin-top: 25px;
+}
+
+/* =================================
+   RESPONSIVE TABLET
+================================= */
+
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 14px 3%;
+        gap: 15px;
+    }
+
+    .navLinks {
+        gap: 17px;
+    }
+
+    .navLinks a {
+        font-size: 12px;
+    }
+
+    .main {
+        padding: 35px 4%;
+    }
+
+    .welcome {
+        gap: 20px;
+    }
+
+    .dateCard {
+        min-width: 220px;
+    }
+}
+
+/* =================================
+   RESPONSIVE MOBILE
+================================= */
+
+@media (max-width: 768px) {
+    .navbar {
+        position: relative;
+        flex-wrap: wrap;
+        padding: 16px 20px;
+        gap: 15px;
+    }
+
+    .logo {
+        flex: 1;
+    }
+
+    .navLinks {
+        order: 3;
+        width: 100%;
+        overflow-x: auto;
+        gap: 24px;
+        padding: 10px 0;
+        scrollbar-width: thin;
+        scrollbar-color: #555b70 transparent;
+    }
+
+    .navLinks a {
+        white-space: nowrap;
+        font-size: 12px;
+    }
+
+    .profile {
+        padding: 6px 10px;
+    }
+
+    .avatar {
+        width: 35px;
+        height: 35px;
+    }
+
+    .main {
+        padding: 25px 20px;
+    }
+
+    .welcome {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 25px 0;
+        gap: 25px;
+    }
+
+    .welcome h1 {
+        font-size: 34px;
+    }
+
+    .dateCard {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .contentGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .sectionCard {
+        padding: 23px;
+    }
+}
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 13px 15px;
+    }
+
+    .logoIcon {
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+    }
+
+    .logo h2 {
+        font-size: 16px;
+    }
+
+    .profile {
+        gap: 7px;
+    }
+
+    .profile h4 {
+        font-size: 11px;
+    }
+
+    .profile p {
+        font-size: 9px;
+    }
+
+    .main {
+        padding: 22px 15px;
+    }
+
+    .welcome h1 {
+        font-size: 29px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    .sectionCard {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .sectionCard h2 {
+        font-size: 26px;
+    }
+
+    .dateCard {
+        padding: 22px;
+    }
+}
+
+/* =================================
+   EXTRA SMALL SCREENS
+================================= */
+
+@media (max-width: 360px) {
+    .profile {
+        padding: 5px 7px;
+    }
+
+    .profile p {
+        display: none;
+    }
+
+    .welcome h1 {
+        font-size: 26px;
+    }
+
+    .sectionCard {
+        padding: 17px;
+    }
+}
+
+/* =================================
+   ACCESSIBILITY
+================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .dashboard *,
+    .dashboard *::before,
+    .dashboard *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}

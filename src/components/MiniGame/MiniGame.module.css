@@ -1,0 +1,353 @@
+
+/* =====================================
+   MAIN GAME CONTAINER
+===================================== */
+
+.gameContainer {
+    position: relative;
+    background: linear-gradient(145deg, #20263a, #191e30);
+    border: 1px solid #343b52;
+    border-radius: 22px;
+    padding: 32px;
+    margin-top: 25px;
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Top gold accent */
+
+.gameContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20%;
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #edc96e,
+        transparent
+    );
+}
+
+/* =====================================
+   GAME HEADING
+===================================== */
+
+.gameHeading p {
+    color: #d5b76a;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    margin: 0 0 10px;
+}
+
+.gameHeading h2 {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 800;
+    margin: 10px 0;
+}
+
+.gameHeading span {
+    color: #aeb5c9;
+    font-size: 13px;
+}
+
+/* =====================================
+   GAME STATISTICS
+===================================== */
+
+.gameStats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin: 30px 0;
+}
+
+.gameStats div {
+    position: relative;
+    background: linear-gradient(145deg, #30374e, #252b40);
+    border: 1px solid #414a64;
+    border-radius: 16px;
+    padding: 22px 10px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.gameStats div:hover {
+    transform: translateY(-4px);
+    border-color: #c9a958;
+}
+
+.gameStats p {
+    color: #aeb5c9;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 0 0 12px;
+}
+
+.gameStats h2 {
+    color: #edc96e;
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0;
+    font-variant-numeric: tabular-nums;
+}
+
+/* =====================================
+   GAME PLAY AREA
+===================================== */
+
+.gamePlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+/* =====================================
+   COMMON BUTTON STYLES
+===================================== */
+
+.tapButton,
+.startButton {
+    border: none;
+    border-radius: 14px;
+    padding: 16px 30px;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+/* =====================================
+   TAP BUTTON
+===================================== */
+
+.tapButton {
+    background: linear-gradient(135deg, #f5d77e, #c99b3d);
+    color: #24202a;
+    min-width: 170px;
+    box-shadow: 0 7px 22px rgba(207, 166, 75, 0.22);
+}
+
+.tapButton:hover:not(:disabled) {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 10px 28px rgba(207, 166, 75, 0.35);
+}
+
+.tapButton:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+.tapButton:disabled {
+    background: #42485c;
+    color: #aeb5c9;
+    box-shadow: none;
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* =====================================
+   START / REPLAY BUTTON
+===================================== */
+
+.startButton {
+    background: linear-gradient(135deg, #83dfae, #4caf80);
+    color: #14251d;
+    min-width: 150px;
+    box-shadow: 0 7px 20px rgba(76, 175, 128, 0.18);
+}
+
+.startButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(76, 175, 128, 0.3);
+}
+
+.startButton:active {
+    transform: scale(0.96);
+}
+
+/* Keyboard accessibility */
+
+.tapButton:focus-visible,
+.startButton:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+}
+
+/* =====================================
+   GAME RESULT PANEL
+===================================== */
+
+.result {
+    background: linear-gradient(145deg, #263f38, #1e342e);
+    border: 1px solid rgba(121, 224, 170, 0.35);
+    border-radius: 17px;
+    padding: 24px;
+    margin-top: 25px;
+    animation: resultAppear 0.45s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.result h3 {
+    color: #a9e6c2;
+    font-size: 19px;
+    font-weight: 800;
+    margin: 0 0 13px;
+}
+
+.result p {
+    color: #d0e3d7;
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 5px 0;
+}
+
+.result strong {
+    color: #f4d37e;
+    font-size: 15px;
+}
+
+.result h3:last-of-type {
+    color: #f4d37e;
+    margin-top: 17px;
+    font-size: 17px;
+}
+
+/* =====================================
+   OPTIONAL NOTE
+===================================== */
+
+.note {
+    color: #9b9fba;
+    font-size: 11px;
+    margin-top: 20px;
+}
+
+/* =====================================
+   RESULT ANIMATION
+===================================== */
+
+@keyframes resultAppear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 900px) {
+    .gameContainer {
+        padding: 25px;
+    }
+
+    .gameStats {
+        gap: 11px;
+    }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+    .gameContainer {
+        padding: 20px 15px;
+        border-radius: 17px;
+    }
+
+    .gameHeading h2 {
+        font-size: 21px;
+    }
+
+    .gameStats {
+        gap: 8px;
+        margin: 23px 0;
+    }
+
+    .gameStats div {
+        padding: 17px 5px;
+        border-radius: 12px;
+    }
+
+    .gameStats p {
+        font-size: 9px;
+        letter-spacing: 0.4px;
+    }
+
+    .gameStats h2 {
+        font-size: 22px;
+    }
+
+    .gamePlay {
+        gap: 12px;
+        margin: 24px 0;
+    }
+
+    .tapButton,
+    .startButton {
+        padding: 14px 19px;
+        font-size: 12px;
+        min-width: 125px;
+    }
+
+    .result {
+        padding: 18px 12px;
+    }
+
+    .result h3 {
+        font-size: 16px;
+    }
+}
+
+/* Very small screens */
+
+@media (max-width: 360px) {
+    .gameStats {
+        grid-template-columns: 1fr;
+    }
+
+    .gameStats div {
+        padding: 13px;
+    }
+
+    .gamePlay {
+        flex-direction: column;
+    }
+
+    .tapButton,
+    .startButton {
+        width: 100%;
+    }
+}
+
+/* =====================================
+   REDUCED MOTION ACCESSIBILITY
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .gameContainer *,
+    .result {
+        animation: none !important;
+        transition: none !important;
+    }
+}

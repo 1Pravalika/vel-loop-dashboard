@@ -1,0 +1,217 @@
+
+.levelContainer {
+    background: linear-gradient(135deg, #252a40, #1d2235);
+    border: 1px solid #3b4058;
+    border-radius: 18px;
+    padding: 28px;
+    color: white;
+    margin-bottom: 22px;
+}
+
+/* Level Header */
+.levelHeader {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.badge {
+    width: 78px;
+    height: 78px;
+    border: 3px solid #e9bd58;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(145deg, #5a4829, #272b3e);
+    box-shadow: 0 0 20px #e9bd5833;
+}
+
+.badge span {
+    font-size: 28px;
+    font-weight: bold;
+    color: #f5c75e;
+}
+
+.label,
+.xpValue span,
+.nextLevel span {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #e9bd58;
+}
+
+.levelHeader h2 {
+    font-size: 27px;
+    margin: 7px 0;
+}
+
+.levelName {
+    color: #aeb4c7;
+    font-size: 13px;
+}
+
+.xpValue {
+    margin-left: auto;
+    text-align: right;
+}
+
+.xpValue h2 {
+    color: #f5c75e;
+    font-size: 28px;
+}
+
+.xpValue p {
+    color: #aeb4c7;
+    font-size: 12px;
+}
+
+/* Progress */
+.progressSection {
+    margin-top: 35px;
+}
+
+.progressHeading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.progressHeading h3 {
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+.progressHeading p {
+    color: #aeb4c7;
+    font-size: 12px;
+}
+
+.progressHeading strong {
+    color: #f5c75e;
+    font-size: 18px;
+}
+
+.progressBar {
+    height: 12px;
+    width: 100%;
+    margin-top: 20px;
+    background: #393e54;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    background: linear-gradient(90deg, #b98a37, #ffe08a);
+    border-radius: 20px;
+    animation: fillProgress 1.5s ease forwards;
+}
+
+@keyframes fillProgress {
+    from {
+        width: 0;
+    }
+}
+
+/* XP Numbers */
+.progressInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    color: #aeb4c7;
+    font-size: 12px;
+}
+
+/* Next Level */
+.nextLevel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #191e30;
+    border: 1px solid #393e54;
+    border-radius: 13px;
+    padding: 20px;
+    margin-top: 28px;
+}
+
+.nextLevel h2 {
+    color: #f5c75e;
+    margin: 8px 0;
+    font-size: 25px;
+}
+
+.nextLevel p {
+    color: #aeb4c7;
+    font-size: 12px;
+}
+
+.nextBadge {
+    width: 75px;
+    height: 75px;
+    border: 2px dashed #9da3b8;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nextBadge span {
+    font-size: 22px;
+    color: #ffffff;
+    letter-spacing: 0;
+}
+
+.nextBadge p {
+    font-size: 9px;
+    margin-top: 5px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .levelContainer {
+        padding: 18px;
+    }
+
+    .levelHeader {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .badge {
+        width: 62px;
+        height: 62px;
+    }
+
+    .badge span {
+        font-size: 22px;
+    }
+
+    .levelHeader h2 {
+        font-size: 22px;
+    }
+
+    .xpValue {
+        width: 100%;
+        text-align: left;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .xpValue h2 {
+        font-size: 24px;
+    }
+
+    .progressHeading {
+        align-items: flex-start;
+    }
+
+    .progressHeading p {
+        line-height: 1.5;
+    }
+
+    .nextLevel {
+        padding: 15px;
+    }
+}

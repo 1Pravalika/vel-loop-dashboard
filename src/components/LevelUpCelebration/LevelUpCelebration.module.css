@@ -1,0 +1,119 @@
+
+.container {
+    background: #202337;
+    border: 1px solid #30364d;
+    border-radius: 18px;
+    padding: 28px;
+    margin-top: 25px;
+    color: white;
+    text-align: center;
+}
+
+.subtitle {
+    color: #b9a7ff;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.container h2 {
+    margin: 10px 0;
+}
+
+.container p {
+    color: #a6abc2;
+}
+
+.previewButton,
+.continueButton {
+    background: #8b70ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 22px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 7, 20, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.celebration {
+    position: relative;
+    background: #292e45;
+    border: 1px solid #8b70ff;
+    border-radius: 20px;
+    padding: 40px 25px;
+    width: 100%;
+    max-width: 420px;
+    animation: popIn 0.4s ease;
+}
+
+.trophy {
+    font-size: 65px;
+    animation: bounce 1s infinite alternate;
+}
+
+.celebration h1 {
+    color: #b9a7ff;
+    font-size: 27px;
+}
+
+.celebration h2 {
+    color: white;
+}
+
+.celebration p {
+    color: #c0c4d8;
+}
+
+.celebration strong {
+    display: block;
+    color: #79e0aa;
+    margin-top: 20px;
+}
+
+.closeButton {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-12px);
+    }
+}
+
+@media (max-width: 500px) {
+    .celebration {
+        padding: 35px 18px;
+    }
+}

@@ -1,0 +1,44 @@
+
+.activeButton {
+    background: linear-gradient(135deg, #f6d477, #b88732) !important;
+    color: #161827 !important;
+    border-color: #f6d477 !important;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(230, 185, 80, 0.2);
+}
+
+.buttons button {
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.buttons button:hover {
+    transform: translateY(-2px);
+    border-color: #e9bd58;
+}
+
+.retryButton {
+    cursor: pointer;
+    padding: 10px 22px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #e9bd58;
+    color: #161827;
+    font-weight: 700;
+}
+
+.retryButton:hover {
+    background: #f6d477;
+    transform: translateY(-2px);
+}
+
+.stateBox {
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}

@@ -1,0 +1,219 @@
+
+/* =================================
+   XP ACTIVITY CONTAINER
+================================= */
+
+.activityContainer {
+    background: linear-gradient(145deg, #20263a, #191e30);
+    border: 1px solid #343b52;
+    border-radius: 20px;
+    padding: 28px;
+    margin-top: 25px;
+    color: #ffffff;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+/* =================================
+   SECTION HEADING
+================================= */
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 24px;
+}
+
+.heading p {
+    color: #d5b76a;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0 0 8px;
+}
+
+.heading h2 {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.heading span {
+    color: #f4d37e;
+    background: rgba(224, 181, 83, 0.12);
+    border: 1px solid rgba(224, 181, 83, 0.3);
+    padding: 8px 13px;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    white-space: nowrap;
+}
+
+/* =================================
+   ACTIVITY LIST
+================================= */
+
+.activityList {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+/* =================================
+   ACTIVITY ITEM
+================================= */
+
+.activityItem {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: linear-gradient(110deg, #292f46, #252b40);
+    border: 1px solid #373e56;
+    padding: 16px;
+    border-radius: 14px;
+    transition: all 0.25s ease;
+}
+
+.activityItem:hover {
+    transform: translateX(4px);
+    border-color: rgba(225, 190, 104, 0.5);
+    background: linear-gradient(110deg, #30364e, #282e44);
+}
+
+/* =================================
+   ACTIVITY ICON
+================================= */
+
+.activityIcon {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: rgba(224, 181, 83, 0.12);
+    border: 1px solid rgba(224, 181, 83, 0.25);
+    color: #edc96e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+    flex-shrink: 0;
+}
+
+/* =================================
+   ACTIVITY DETAILS
+================================= */
+
+.activityDetails {
+    flex: 1;
+    min-width: 0;
+}
+
+.activityDetails h3 {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 6px;
+}
+
+.activityDetails p {
+    color: #a6aec3;
+    font-size: 12px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.activityDetails small {
+    display: inline-block;
+    color: #e4c477;
+    font-size: 10px;
+    margin-top: 5px;
+    letter-spacing: 0.3px;
+}
+
+/* =================================
+   XP EARNED
+================================= */
+
+.activityItem strong {
+    color: #79e0aa;
+    font-size: 14px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 900px) {
+    .activityContainer {
+        padding: 23px;
+    }
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+    .activityContainer {
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    .heading {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 19px;
+    }
+
+    .heading h2 {
+        font-size: 19px;
+    }
+
+    .activityItem {
+        gap: 11px;
+        padding: 13px 10px;
+    }
+
+    .activityIcon {
+        width: 39px;
+        height: 39px;
+        font-size: 18px;
+        border-radius: 11px;
+    }
+
+    .activityDetails h3 {
+        font-size: 12px;
+    }
+
+    .activityDetails p {
+        font-size: 10px;
+    }
+
+    .activityItem strong {
+        font-size: 11px;
+    }
+}
+
+/* Small mobile */
+
+@media (max-width: 360px) {
+    .activityItem {
+        flex-wrap: wrap;
+    }
+
+    .activityItem strong {
+        margin-left: 50px;
+    }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .activityItem {
+        transition: none;
+    }
+}

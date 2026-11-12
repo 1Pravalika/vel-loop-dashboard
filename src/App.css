@@ -1,0 +1,61 @@
+.rewards-section {
+  margin: 20px;
+  padding: 20px;
+}
+
+.rewards-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.reward-card {
+  background: white;
+  padding: 20px;
+  width: 180px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px white(117, 34, 34, 0.12);
+}
+
+.reward-card h1 {
+  font-size: 40px;
+}
+.roadmap-section {
+  margin: 20px;
+  padding: 20px;
+}
+
+.roadmap-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.roadmap-card {
+  background: white;
+  padding: 20px;
+  width: 150px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #161827;
+}
+
+button,
+a {
+  font-family: inherit;
+}
