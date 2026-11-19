@@ -1,0 +1,74 @@
+:root {
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  color: #f0f1f5;
+  background: #161827;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --bg: #161827;
+  --panel: #202235;
+  --panel-raised: #25283b;
+  --line: rgba(255, 255, 255, 0.075);
+  --line-strong: rgba(255, 255, 255, 0.12);
+  --text: #eff0f5;
+  --muted: #9296aa;
+  --gold: #e6bf60;
+  --accent: #e6bf60;
+  --accent-soft: #ffdc8a;
+  --green: #88c8a2;
+  --blue: #92b9e8;
+  --purple: #b8a0df;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: var(--bg);
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  font-size: 14px;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent-soft);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: rgba(230, 191, 96, 0.3);
+  color: white;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}

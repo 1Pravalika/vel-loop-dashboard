@@ -1,0 +1,183 @@
+.todayCard {
+  display: grid;
+  grid-template-columns: 41px minmax(0, 1fr) minmax(130px, 0.35fr);
+  align-items: center;
+  gap: 14px;
+  padding: 17px 19px;
+}
+
+.todayIcon {
+  display: grid;
+  width: 39px;
+  height: 39px;
+  place-items: center;
+  border: 1px solid rgba(240, 194, 93, 0.2);
+  border-radius: 12px;
+  background: rgba(240, 194, 93, 0.07);
+  color: #eac86e;
+}
+
+.todayCopy {
+  display: grid;
+  gap: 4px;
+}
+
+.todayCopy strong {
+  color: #e7e7ee;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.todayCopy > span:last-child {
+  color: #969aac;
+  font-size: 9px;
+}
+
+.todayProgress {
+  height: 7px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.todayProgress span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #b78538, #f1d17c);
+  transition: width 350ms ease;
+}
+
+.earnGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.activityCard {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  align-items: start;
+  gap: 13px;
+  padding: 17px;
+  transition: border-color 150ms ease, transform 150ms ease;
+}
+
+.activityCard:hover {
+  transform: translateY(-1px);
+  border-color: rgba(240, 194, 93, 0.19);
+}
+
+.activityIcon {
+  display: grid;
+  width: 41px;
+  height: 41px;
+  place-items: center;
+  border: 1px solid rgba(240, 194, 93, 0.19);
+  border-radius: 13px;
+  background: rgba(240, 194, 93, 0.07);
+  color: #e7c56b;
+}
+
+.comingIcon {
+  border-color: rgba(187, 162, 222, 0.19);
+  background: rgba(187, 162, 222, 0.065);
+  color: #c1a8e1;
+}
+
+.activityMain {
+  display: grid;
+  min-width: 0;
+  gap: 7px;
+}
+
+.activityTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.activityTop strong {
+  color: #e9e9ef;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.description {
+  color: #a1a5b6;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.rewardLine {
+  color: #d6bd72;
+  font-size: 9px;
+  font-weight: 650;
+}
+
+.activityAction {
+  grid-column: 2;
+  margin-top: 1px;
+}
+
+.activityAction button,
+.activityAction a {
+  min-height: 32px;
+  font-size: 9px;
+}
+
+.activityAction button:disabled {
+  opacity: 0.58;
+  cursor: default;
+}
+
+.earnNote {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 12px;
+  border: 1px solid rgba(187, 162, 222, 0.12);
+  border-radius: 11px;
+  background: rgba(187, 162, 222, 0.035);
+  color: #b5a0d4;
+}
+
+.earnNote svg {
+  flex: 0 0 auto;
+}
+
+.earnNote p {
+  margin: 0;
+  color: #a0a4b5;
+  font-size: 9px;
+  line-height: 1.55;
+}
+
+@media (max-width: 850px) {
+  .earnGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .todayCard {
+    grid-template-columns: 37px minmax(0, 1fr);
+    padding: 14px;
+  }
+
+  .todayProgress {
+    grid-column: 1 / -1;
+  }
+
+  .activityCard {
+    grid-template-columns: 36px minmax(0, 1fr);
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .activityIcon {
+    width: 35px;
+    height: 35px;
+  }
+}

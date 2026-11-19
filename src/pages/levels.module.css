@@ -1,0 +1,624 @@
+.levelHeroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(250px, 0.8fr);
+  gap: 14px;
+}
+
+.levelHero {
+  position: relative;
+  overflow: hidden;
+  padding: 22px;
+  background:
+    radial-gradient(ellipse at 5% 0%, rgba(240, 194, 93, 0.15), transparent 40%),
+    linear-gradient(145deg, #292b3e, #202235);
+}
+
+.levelHero::after {
+  position: absolute;
+  right: -68px;
+  bottom: -176px;
+  width: 330px;
+  height: 330px;
+  border: 1px solid rgba(240, 194, 93, 0.065);
+  border-radius: 50%;
+  box-shadow: 0 0 0 24px rgba(240, 194, 93, 0.015), 0 0 0 53px rgba(240, 194, 93, 0.011);
+  content: "";
+  pointer-events: none;
+}
+
+.heroLead {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.heroMedal {
+  position: relative;
+  display: grid;
+  width: 68px;
+  height: 72px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid rgba(241, 198, 94, 0.58);
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(240, 194, 93, 0.19), rgba(240, 194, 93, 0.04));
+  color: #f2d17e;
+  box-shadow: 0 0 25px rgba(240, 194, 93, 0.08);
+}
+
+.heroMedal span {
+  position: absolute;
+  bottom: 9px;
+  color: #f0d27e;
+  font-size: 9px;
+  font-weight: 750;
+}
+
+.heroLead h2 {
+  margin: 5px 0 3px;
+  color: #f4f2f5;
+  font-family: Manrope, sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.heroLead p {
+  margin: 0;
+  color: #a4a8b9;
+  font-size: 10px;
+}
+
+.heroXP {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  margin: 26px 0 18px;
+}
+
+.heroXP div {
+  display: grid;
+  gap: 3px;
+}
+
+.heroXP span {
+  color: #9da1b3;
+  font-size: 9px;
+}
+
+.heroXP strong {
+  color: #f1d17d;
+  font-family: Manrope, sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.toNext {
+  text-align: right;
+}
+
+.heroFoot {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 13px;
+  color: #a0a3b4;
+  font-size: 9px;
+}
+
+.nextCard {
+  display: flex;
+  min-height: 265px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 18px;
+  background:
+    radial-gradient(ellipse at 95% 26%, rgba(188, 163, 225, 0.14), transparent 40%),
+    linear-gradient(145deg, #282a3d, #202235);
+}
+
+.nextCardTop {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lockMark {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border: 1px solid rgba(188, 163, 225, 0.19);
+  border-radius: 10px;
+  color: #c2a9e2;
+}
+
+.levelChip {
+  margin-top: 11px;
+  padding: 4px 7px;
+  border-radius: 5px;
+  background: rgba(240, 194, 93, 0.08);
+  color: #e6c876;
+  font-size: 8px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+}
+
+.rewardIllustration {
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: 69px;
+  place-items: center;
+  margin: 5px 0;
+}
+
+.rewardRing {
+  position: absolute;
+  display: grid;
+  width: 55px;
+  height: 55px;
+  place-items: center;
+  border: 1px solid rgba(240, 194, 93, 0.4);
+  border-radius: 19px;
+  background: radial-gradient(circle, rgba(240, 194, 93, 0.15), rgba(240, 194, 93, 0.025) 70%);
+  color: #edcc74;
+  box-shadow: 0 0 30px rgba(240, 194, 93, 0.11);
+}
+
+.rewardIllustration img {
+  position: relative;
+  z-index: 1;
+  width: 94px;
+  height: 76px;
+  object-fit: contain;
+  filter: drop-shadow(0 9px 13px rgba(8, 8, 13, 0.35));
+}
+
+.nextCard h2 {
+  margin: 4px 0;
+  color: #f3d480;
+  font-family: Manrope, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.nextCard p {
+  margin: 0;
+  color: #a0a4b5;
+  font-size: 9px;
+  line-height: 1.45;
+}
+
+.unlockText {
+  margin-top: 8px;
+  color: #c4c6d0;
+  font-size: 9px;
+}
+
+.nextCard > .textLink {
+  margin-top: auto;
+  padding-top: 11px;
+}
+
+.sectionHeading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 17px;
+}
+
+.sectionHeading h2 {
+  margin: 5px 0 0;
+  color: #e9e9ef;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.roadmapHint {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #8f93a6;
+  font-size: 9px;
+}
+
+.roadmapRewards {
+  margin-top: 21px;
+  padding-top: 19px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.roadmapRewards .sectionHeading {
+  margin-bottom: 8px;
+}
+
+.engagementGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+  align-items: stretch;
+  gap: 14px;
+}
+
+.activityPanel {
+  min-width: 0;
+}
+
+.activityList {
+  display: grid;
+}
+
+.activityItem {
+  display: grid;
+  grid-template-columns: 31px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  padding: 13px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.activityItem:first-child {
+  border-top: 0;
+}
+
+.activityIcon {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border: 1px solid rgba(240, 194, 93, 0.17);
+  border-radius: 10px;
+  background: rgba(240, 194, 93, 0.055);
+  color: #e4c675;
+}
+
+.activityCopy {
+  display: grid;
+  min-width: 0;
+  gap: 4px;
+}
+
+.activityCopy strong {
+  overflow: hidden;
+  color: #e3e3eb;
+  font-size: 10px;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.activityCopy small {
+  overflow: hidden;
+  color: #9296a8;
+  font-size: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.activityXP {
+  color: #9bd2ae;
+  font-size: 9px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.earnSection {
+  display: grid;
+  gap: 14px;
+}
+
+.earnHeading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.earnHeading h2 {
+  margin: 5px 0 4px;
+  color: #e9e9ef;
+  font-size: 17px;
+  font-weight: 650;
+}
+
+.earnHeading p {
+  margin: 0;
+  color: #989cad;
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+.earnHeading > .textLink {
+  flex: 0 0 auto;
+  margin-bottom: 2px;
+}
+
+.earningGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.earningCard {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) 28px;
+  align-items: start;
+  gap: 10px;
+  min-width: 0;
+  padding: 13px;
+}
+
+.earningIcon {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border: 1px solid rgba(240, 194, 93, 0.18);
+  border-radius: 10px;
+  background: rgba(240, 194, 93, 0.06);
+  color: #e4c675;
+}
+
+.comingIcon {
+  border-color: rgba(188, 163, 225, 0.18);
+  background: rgba(188, 163, 225, 0.06);
+  color: #c2a9e2;
+}
+
+.earningText {
+  display: grid;
+  min-width: 0;
+  gap: 6px;
+}
+
+.earningTitle {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.earningTitle strong {
+  color: #e5e5ed;
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.earningTitle .statusTag {
+  padding: 3px 6px;
+  font-size: 7px;
+}
+
+.earningText p {
+  margin: 0;
+  color: #999cad;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.earningText > small {
+  color: #d3bb78;
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.earningAction {
+  display: grid;
+  width: 27px;
+  height: 27px;
+  place-items: center;
+  justify-self: end;
+  border: 1px solid rgba(240, 194, 93, 0.17);
+  border-radius: 9px;
+  background: rgba(240, 194, 93, 0.055);
+  color: #e5c777;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 150ms ease, border-color 150ms ease, transform 150ms ease;
+}
+
+.earningAction:hover:not(:disabled) {
+  transform: translateX(2px);
+  border-color: rgba(240, 194, 93, 0.38);
+  background: rgba(240, 194, 93, 0.12);
+}
+
+.earningAction:disabled {
+  border-color: rgba(136, 200, 162, 0.18);
+  background: rgba(136, 200, 162, 0.055);
+  color: #91cba5;
+  cursor: default;
+}
+
+.earnDisclaimer {
+  margin: 0;
+  color: #85899c;
+  font-size: 8px;
+}
+
+.rewardRoadmap {
+  display: grid;
+}
+
+.rewardStop {
+  display: grid;
+  grid-template-columns: 31px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.rewardStop:first-child {
+  border-top: 0;
+}
+
+.rewardStopIcon {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  color: #9c9fb1;
+}
+
+.rewardUnlocked .rewardStopIcon {
+  border-color: rgba(136, 200, 162, 0.2);
+  background: rgba(136, 200, 162, 0.06);
+  color: #91cba5;
+}
+
+.rewardStop > span:nth-child(2) {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.rewardStop small {
+  color: #85899d;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.rewardStop strong {
+  overflow: hidden;
+  color: #dfe0e8;
+  font-size: 10px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rewardStop em {
+  color: #bdab72;
+  font-size: 9px;
+  font-style: normal;
+}
+
+.stopStatus {
+  color: #9b9fb0;
+  font-size: 8px;
+}
+
+.rewardUnlocked .stopStatus {
+  color: #91cba5;
+}
+
+.levelDetails {
+  display: grid;
+  justify-items: center;
+  gap: 9px;
+  text-align: center;
+}
+
+.detailBadge {
+  display: grid;
+  width: 56px;
+  height: 56px;
+  place-items: center;
+  margin-bottom: 4px;
+  border: 1px solid rgba(240, 194, 93, 0.34);
+  border-radius: 17px;
+  background: rgba(240, 194, 93, 0.08);
+  color: #edcc73;
+}
+
+.levelDetails > strong {
+  color: #f0f0f5;
+  font-size: 15px;
+}
+
+.levelDetails > span {
+  font-size: 10px;
+}
+
+.detailReward {
+  display: grid;
+  width: 100%;
+  gap: 6px;
+  margin: 7px 0;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+}
+
+.detailReward span {
+  color: #9296a9;
+  font-size: 9px;
+}
+
+.detailReward strong {
+  color: #e9ca72;
+  font-size: 12px;
+}
+
+.detailStatus {
+  color: #b4b6c3;
+}
+
+@media (max-width: 940px) {
+  .engagementGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .earningGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .levelHeroGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .nextCard {
+    min-height: 228px;
+  }
+}
+
+@media (max-width: 600px) {
+  .levelHero {
+    padding: 17px;
+  }
+
+  .heroMedal {
+    width: 58px;
+    height: 62px;
+  }
+
+  .heroLead h2 {
+    font-size: 19px;
+  }
+
+  .heroXP strong {
+    font-size: 18px;
+  }
+
+  .roadmapHint {
+    display: none;
+  }
+
+  .earnHeading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .earningGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .activityItem {
+    grid-template-columns: 30px minmax(0, 1fr) auto;
+  }
+}

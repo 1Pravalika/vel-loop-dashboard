@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 128" fill="none">
+  <path d="M25 51h110v57H25z" fill="#6F5428" stroke="#E3BC64" stroke-width="2"/>
+  <path d="M19 48a6 6 0 0 1 6-6h110a6 6 0 0 1 6 6v9H19v-9Z" fill="#C99439" stroke="#F0D287" stroke-width="2"/>
+  <path d="M31 62h98v39H31z" fill="#292638" stroke="#DDB65D" stroke-width="2"/>
+  <path d="M37 67h86v29H37z" fill="#373344"/>
+  <path d="M68 56h24v17H68z" fill="#D1A447" stroke="#F1D17C" stroke-width="2"/>
+  <path d="M74 63a6 6 0 1 1 12 0v7H74v-7Z" fill="#282431"/>
+  <circle cx="80" cy="63" r="2" fill="#F0CD72"/>
+  <path d="M34 42c0-14 11-25 25-25h42c14 0 25 11 25 25" stroke="#F0CA6D" stroke-width="3" stroke-linecap="round"/>
+  <path d="M56 39c0-10 8-18 18-18h12c10 0 18 8 18 18" stroke="#9D7AC7" stroke-width="4" stroke-linecap="round"/>
+  <path d="m41 42 13-7m65 7-13-7" stroke="#E8C66F" stroke-width="3" stroke-linecap="round"/>
+  <path d="M20 109h120" stroke="#C69945" stroke-width="2" stroke-linecap="round" opacity=".8"/>
+  <path d="m18 31 3 6 6 3-6 3-3 6-3-6-6-3 6-3 3-6Zm124 12 2.5 5 5 2.5-5 2.5-2.5 5-2.5-5-5-2.5 5-2.5 2.5-5Z" fill="#EBD28D" opacity=".8"/>
+</svg>

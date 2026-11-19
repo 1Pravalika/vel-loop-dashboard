@@ -1,0 +1,168 @@
+.roadmap {
+  display: grid;
+  gap: 9px;
+}
+
+.level {
+  display: grid;
+  grid-template-columns: 35px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 67px;
+  padding: 10px 13px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.018);
+  color: var(--text);
+  text-align: left;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+  cursor: pointer;
+}
+
+.level:hover {
+  transform: translateY(-1px);
+  border-color: rgba(240, 194, 93, 0.36);
+  background: rgba(240, 194, 93, 0.045);
+}
+
+.marker {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #272a3b;
+  color: #a9adbf;
+}
+
+.complete .marker {
+  border-color: rgba(133, 198, 161, 0.34);
+  background: rgba(133, 198, 161, 0.1);
+  color: #88c9a4;
+}
+
+.current {
+  border-color: rgba(240, 194, 93, 0.38);
+  background: linear-gradient(90deg, rgba(240, 194, 93, 0.09), rgba(240, 194, 93, 0.025));
+}
+
+.current .marker,
+.next .marker {
+  border-color: rgba(240, 194, 93, 0.5);
+  color: #f0c25d;
+}
+
+.levelText {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.levelMeta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #9296a9;
+  font-size: 8px;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+}
+
+.youAreHere,
+.nextLabel {
+  color: #efc96f;
+  font-size: 7px;
+}
+
+.levelText strong {
+  overflow: hidden;
+  color: #e9eaf0;
+  font-size: 12px;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rewardText {
+  overflow: hidden;
+  color: #9699ab;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.stateText {
+  color: #85899d;
+  font-size: 9px;
+}
+
+.current .stateText,
+.next .stateText {
+  color: #e8c66f;
+}
+
+.complete .stateText {
+  color: #88c9a4;
+}
+
+.disclaimer {
+  margin: 7px 0 0;
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+.compact {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 8px;
+}
+
+.compact .level {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 12px;
+}
+
+.compact .marker {
+  width: 29px;
+  height: 29px;
+}
+
+.compact .levelText {
+  width: 100%;
+}
+
+.compact .levelMeta {
+  flex-wrap: wrap;
+}
+
+.compact .stateText {
+  display: none;
+}
+
+.compact .disclaimer {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 950px) {
+  .compact {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .compact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .level {
+    transition: none;
+  }
+}
