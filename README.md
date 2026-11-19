@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # VELOOP Rewards — Local Demo
 
 A responsive React and Vite rewards dashboard prototype. It includes a home dashboard, earning activities, a demo wallet, milestone rewards, an editable local profile, a level progression roadmap, and the playable Reward Match mini-game.
@@ -44,7 +43,4 @@ The UI uses React Hooks, Vite, Bootstrap, Lucide icons, and CSS Modules. It incl
 
 ## Local-only scope
 
-There are no Login or Register pages, no authentication, and no deployment or GitHub setup. Wallet balances and all reward values are demo data with no cash value.
-=======
-# vel-loop-dashboard
->>>>>>> 41879dfb3c319e0245677495879980ecc3d5c6da
+There are no Login or Register pages or authentication. Wallet balances and all reward values are demo data with no cash value.
